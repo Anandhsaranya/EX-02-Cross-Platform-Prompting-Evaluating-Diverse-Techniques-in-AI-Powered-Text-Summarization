@@ -17,8 +17,6 @@ Speed
 
 User experience
 
-# Zero Shot Prompting:
-
 # OUTPUT:
 ## Gemini ai :
 ## Prompt :
