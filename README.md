@@ -1,9 +1,9 @@
 # EX-02-Cross-Platform-Prompting-Evaluating-Diverse-Techniques-in-AI-Powered-Text-Summarization
-# AIM
+# AIM:
 To evaluate and compare the effectiveness of prompting techniques (zero-shot, few-shot, chain-of-thought, role-based) across different AI platforms (e.g., ChatGPT, Gemini, Claude, Copilot) in a specific task: text summarization.
 
 # Scenario:
-You are part of a content curation team for an educational platform that delivers quick summaries of research papers to undergraduate students. Your task is to summarize a 500-word technical article on "The Basics of BLACK HOLE" using multiple AI platforms and prompting strategies.
+You are part of a content curation team for an educational platform that delivers quick summaries of research papers to undergraduate students. Your task is to summarize a 500-word technical article on "The Basics of Blockchain Technology" using multiple AI platforms and prompting strategies.
 
 Your goal is to determine which combination of prompting technique + platform provides the best summary in terms of:
 
@@ -17,78 +17,199 @@ Speed
 
 User experience
 
-# CLAUDE :
-Technical Summary: Black Holes
-Black holes are among the most extreme objects in the universe, representing regions where gravity becomes so intense that nothing—not even light—can escape. These astronomical bodies form when massive stars collapse at the end of their life cycles, creating objects so dense that they warp spacetime itself.
+# Zero Shot Prompting:
 
-# Fundamental Properties
-A black hole's defining characteristic is its event horizon, a spherical boundary beyond which escape becomes impossible. The size of this boundary, called the Schwarzschild radius, is directly proportional to the black hole's mass through the formula rs = 2GM/c². The no-hair theorem establishes that black holes possess only three measurable properties: mass, electric charge, and angular momentum. At the center lies a gravitational singularity—a point of infinite density where spacetime curvature becomes infinite. For rotating black holes, this forms a ring-shaped singularity. Objects falling toward this center experience "spaghettification," being stretched into long, thin shapes by extreme tidal forces.
+# OUTPUT:
+## Gemini ai :
+## Prompt :
 
-# Classification and Structure:
-Black holes are categorized by mass into several types: Stellar black holes (2-150 solar masses) Intermediate-mass black holes (10²-10⁵ solar masses) Supermassive black holes (10⁶-10⁹ solar masses) Ultramassive black holes (10⁹-10¹¹ solar masses) Rotating black holes possess an ergosphere—a region where spacetime itself is dragged around the black hole, making it impossible for objects to remain stationary. They also have a photon sphere at 1.5 times the Schwarzschild radius, where light can orbit the black hole in unstable circular paths.
+"Summarize a 500-word technical article on "The Basics of Blockchain Technology".
+## Summary :
 
-# Formation and Evolution
-Black holes typically form through gravitational collapse when a massive star (over 20 solar masses) exhausts its nuclear fuel. If the stellar remnant exceeds the Tolman-Oppenheimer-Volkoff limit (~3-4 solar masses), no known force can halt the collapse. Alternative formation mechanisms include direct collapse of gas clouds in the early universe and potentially high-energy particle collisions.
+An article titled "The Basics of Blockchain Technology" would provide a foundational technical overview, covering its definition, core components, and operational mechanics.
 
-# Hawking Radiation and Thermodynamics
-Stephen Hawking's 1974 discovery revealed that black holes emit thermal radiation due to quantum effects near the event horizon. This Hawking radiation gives black holes a temperature inversely proportional to their mass—massive stellar black holes have temperatures of only 62 nanokelvins, far below cosmic background radiation. Consequently, large black holes grow rather than evaporate, while hypothetical microscopic black holes would evaporate almost instantaneously.
+Definition and Core Architecture The article would define a blockchain as a distributed, decentralized digital ledger. Unlike traditional centralized databases, the ledger is replicated and shared across a network of computers, called nodes. The "blockchain" is literally a sequential chain of blocks, where each block contains a batch of validated transactions.
 
-# Observational Evidence
-The 2015 LIGO detection of gravitational waves from merging black holes provided direct observational confirmation. The 2019 Event Horizon Telescope image of the supermassive black hole in galaxy M87 marked the first visual evidence of these objects. Black holes are typically detected through their gravitational effects on nearby matter, X-ray emissions from accretion disks, or gravitational wave signatures. Modern research continues to explore black hole thermodynamics, information paradoxes, and their role in galaxy formation, making them central objects in contemporary astrophysics and fundamental physics.
+Cryptographic Security and Immutability The technology's security relies heavily on cryptographic hashing.
 
-# GEMINI:
-A black hole is a region of spacetime where gravity is so intense that nothing, not even electromagnetic radiation such as light, can escape from it. This phenomenon is a prediction of Albert Einstein's theory of general relativity, which posits that a sufficiently compact mass can deform spacetime to form a black hole.
+Every block contains a unique cryptographic hash generated from its contents.
 
-Fundamental Properties and Structure
-The boundary of the region from which no escape is possible is called the event horizon. Although it has a tremendous effect on the fate of objects crossing it, it has no locally detectable features. At the center of a black hole, as described by general relativity, lies a gravitational singularity, a region where the spacetime curvature becomes infinite and the laws of physics as we know them break down. For a non-rotating black hole, the singularity is a single point, while for a rotating black hole, it is smeared out to form a ring singularity. According to the "no-hair theorem," a stable black hole is completely characterized by only three independent physical properties: mass, electric charge, and angular momentum. The simplest stationary black holes, which have mass but no charge or angular momentum, are known as Schwarzschild black holes. More complex types include the Kerr black hole (rotating, no charge), the Reissner–Nordström black hole (charged, non-rotating), and the Kerr-Newman black hole (both charged and rotating).
+Crucially, each new block also stores the hash of the previous block. This feature creates a verifiable, tamper-proof chain of data. If an attacker attempts to alter a single transaction in an older block, the block's hash changes, thus invalidating the hash stored in the subsequent block, and effectively breaking the entire chain.
 
-Advanced Spacetime Features
-Rotating black holes exhibit additional complex features. They are surrounded by a region called the ergosphere, where spacetime itself is dragged along with the rotation. Within the ergosphere, it is impossible for an object to remain stationary relative to a distant observer; it is forced to co-rotate with the black hole. It is theoretically possible to extract energy from a black hole's rotational energy through the Penrose process, which involves entering the ergosphere. General relativity also predicts the existence of an innermost stable circular orbit (ISCO). Inside this radius, any infinitesimal perturbation to a circular orbit will cause a particle to spiral into the black hole. The location of the ISCO is dependent on the spin of the black hole; it is closer to the event horizon for black holes that spin faster in the same direction as the orbiting particle.
+This structure ensures immutability: once data is recorded on the blockchain, it cannot be retroactively altered or deleted.
 
-Thermodynamics and Observation
-In the 1970s, Stephen Hawking showed that black holes are not entirely "black" but emit a faint thermal radiation due to quantum effects near the event horizon, a process now known as Hawking radiation. This causes the black hole to lose mass and entropy over time and eventually evaporate, although for stellar-mass or larger black holes, this process is incredibly slow. This discovery linked the laws of black hole mechanics to the laws of thermodynamics, suggesting that a black hole has an entropy proportional to the area of its event horizon. Because they emit no light, black holes cannot be observed directly. Instead, astronomers infer their presence by observing their gravitational influence on nearby matter. Evidence for black holes comes from tracking the orbits of stars around a central, unseen mass and by observing the high-energy radiation emitted by accretion disks—matter that is heated to extreme temperatures as it spirals into the black hole. The Doppler shift in the X-rays from these disks can be used to measure the spin of the black hole
+Decentralization and Consensus Decentralization is a key feature, removing the need for a central authority (like a bank or government). Transactions are initiated, broadcast to the network, and then verified by the nodes.
+To ensure all nodes agree on the single, correct version of the ledger and the sequence of new blocks, a consensus mechanism is employed. The two most common are:
 
-CHATGPT :
-🔹 Technical Article : Black Holes: Nature, Formation, and Physics
+Proof-of-Work (PoW): Requires computational effort (mining) to solve a complex puzzle, securing the network.
 
-A black hole is a region of spacetime where gravity is so intense that nothing, not even light, can escape. They are among the most fascinating predictions of Einstein’s General Theory of Relativity (1915), which describes how mass and energy curve spacetime. The boundary surrounding a black hole is called the event horizon, beyond which no information can escape to the outside universe.
+Proof-of-Stake (PoS): Requires participants to "stake" cryptocurrency, using economic incentives to validate transactions honestly.
 
-Formation of Black Holes
-Black holes typically form from the gravitational collapse of massive stars. When a star with mass greater than about 20 times that of the Sun exhausts its nuclear fuel, its core collapses under gravity. If the remnant core’s mass exceeds the Tolman–Oppenheimer–Volkoff limit, no force can counteract the collapse, leading to the creation of a stellar-mass black hole. Other types include supermassive black holes (millions to billions of solar masses, located at galactic centers) and intermediate black holes, whose existence is still under active study.
+Once consensus is reached, the new block is added to the chain across all nodes, making the transaction final and transparent to all participants.
 
-Structure of a Black Hole
-A black hole can be described by just three parameters: mass, charge, and angular momentum (the “no-hair theorem”). Its key regions are: Event Horizon – the boundary of no return. Singularity – a point of infinite density where known physics breaks down. Accretion Disk – a disk of hot gas and matter spiraling into the black hole, emitting X-rays detectable by telescopes.
+Applications and Value Proposition The article would conclude by noting that while blockchain technology is most famously associated with cryptocurrencies (like Bitcoin and Ethereum), its applications extend far beyond finance. Its core value—providing a system for building trust in a trustless environment through cryptographic proof and distributed agreement—makes it suitable for:
+Supply chain management.
 
-Detection and Observation
-Since black holes cannot emit light, they are detected indirectly. Methods include: Tracking the motion of nearby stars orbiting an invisible massive object (as in Sagittarius A*, the black hole at the Milky Way’s center). Detecting high-energy radiation from accretion disks. Measuring gravitational waves, ripples in spacetime observed when black holes merge (detected first by LIGO in 2015). Imaging shadows of black holes, as achieved by the Event Horizon Telescope in 2019, which produced the first image of the supermassive black hole in galaxy M87. Physics and Paradoxes
+Digital identity solutions.
 
-Black holes raise deep questions in theoretical physics:
-Hawking Radiation (1974): Stephen Hawking predicted that quantum effects allow black holes to slowly emit radiation, leading to gradual evaporation. Information Paradox: If black holes evaporate, what happens to the information about matter that fell in? Resolving this is a key problem in modern physics, possibly requiring a theory of quantum gravity. Importance in Astrophysics: Black holes are not just exotic objects; they play crucial roles in galaxy formation and evolution. Supermassive black holes regulate star formation through energetic outflows, while black hole mergers help test fundamental physics under extreme conditions.
+Voting systems.
 
-🔹 Concise Summary
+Smart contracts (self-executing agreements).
 
-A black hole is a region of spacetime with gravity so strong that nothing, not even light, can escape. Formed from collapsing massive stars, they come in stellar, intermediate, and supermassive varieties. Black holes are defined by mass, charge, and spin, and are characterized by an event horizon, singularity, and often an accretion disk. They are observed indirectly through stellar motion, radiation from accretion disks, gravitational waves, and imaging (like the Event Horizon Telescope’s 2019 breakthrough). Theoretical insights include Hawking radiation and the information paradox, which challenge our understanding of physics. Beyond their mystery, black holes influence galaxy evolution and provide a laboratory for testing relativity and quantum theories.
+# Claude ai:
+## Prompt:
 
-# COPILOT:
-# Summary: Black Holes Explained
+"Summarize a 500-word technical article on "The Basics of Blockchain Technology".
 
-A black hole is a region in space where gravity is so intense that nothing—not even light—can escape. This phenomenon arises when a massive star collapses under its own gravity, compressing matter into an infinitely dense point called a singularity, surrounded by a boundary known as the event horizon.
 
-# 🌟 Types of Black Holes
+## Summary: The Basics of Blockchain Technology For Undergraduate Students
 
-Stellar-mass black holes: Formed from collapsing stars with masses over 20 times that of the Sun. Supermassive black holes: Found at the centers of galaxies, including our Milky Way, with masses ranging from millions to billions of solar masses. Intermediate-mass black holes: A rare class, with masses between 100 and 10,000 solar masses, confirmed through gravitational wave detections like GW190521
+What is Blockchain? Blockchain is a revolutionary digital ledger system that records transactions across multiple computers in a way that makes the data nearly impossible to alter retroactively. Think of it as a shared notebook that everyone in a network can read, but no single person controls or can secretly modify. How Does It Work? Information is grouped into "blocks" that contain transaction data, a timestamp, and a unique cryptographic code called a hash. Each new block connects to the previous one, forming a "chain." This linking mechanism ensures that if anyone tries to tamper with an old block, it breaks the entire chain, making fraud immediately detectable. The network uses consensus mechanisms—where multiple participants must agree on the validity of transactions—to add new blocks, eliminating the need for a central authority like a bank. Key Features:
 
-# 🔬 Formation & Growth
+Decentralization: No single entity controls the entire network Transparency: All participants can view the transaction history Immutability: Once recorded, data is extremely difficult to change Security: Cryptographic techniques protect against unauthorized alterations
 
-A dying massive star undergoes a supernova, shedding its outer layers while its core collapses. If the core's mass exceeds about three solar masses, no known force can halt the collapse. Black holes grow by accreting matter, including gas, stars, and even other black holes.
+Real-World Applications: Beyond cryptocurrencies like Bitcoin, blockchain technology is transforming supply chain management (tracking products from origin to consumer), healthcare (securing medical records), and digital identity verification. Smart contracts—self-executing agreements with terms written directly into code—automate processes without intermediaries. Why It Matters: Blockchain represents a fundamental shift in how we establish trust in digital transactions, potentially reducing costs, increasing efficiency, and creating more transparent systems across industries.
 
-# 📸 Observational Breakthroughs
+# Copilot :
+## Prompt :
 
-In 2019, the Event Horizon Telescope captured the first image of a black hole in galaxy M87, revealing a glowing ring around a dark center—the shadow of the black hole Black holes can be indirectly observed via their gravitational effects on nearby matter and light, often forming accretion disks that emit intense radiation.
+"Summarize a 500-word technical article on "The Basics of Blockchain Technology".
+## Summary :
 
-# 🧠 Theoretical Insights
+What Is Blockchain? Blockchain is a distributed ledger technology that stores data in blocks, which are chronologically linked to form a chain.
 
-Predicted by Einstein’s general relativity, black holes behave like perfect black bodies, absorbing all incident light. Hawking radiation, a quantum effect, suggests black holes emit faint thermal radiation, implying they could eventually evaporate over cosmic timescales.
+Each block contains:
+
+A list of transactions
+
+A timestamp
+
+A cryptographic hash of its contents and the previous block
+
+This structure ensures that any tampering with data alters the hash, making fraud easily detectable.
+
+🛡 Core Features Immutability: Once data is recorded, it cannot be changed without altering all subsequent blocks.
+
+Decentralization: No single entity controls the blockchain. Instead, it's maintained by a network of nodes.
+
+Transparency: All participants can view the ledger, promoting trust.
+
+Security: Cryptographic techniques protect data integrity and user identity.
+
+✅ How It Works Transaction Initiation: A user requests a transaction.
+
+Verification: Network nodes validate the transaction using consensus mechanisms (e.g., Proof of Work).
+
+Block Creation: Verified transactions are grouped into a block.
+
+Block Linking: The new block is added to the chain using cryptographic hashes.
+
+Ledger Update: The updated blockchain is shared across the network.
+
+🧠 Key Concepts Hashing: Converts data into a fixed-length string, ensuring integrity.
+
+Consensus Mechanisms: Rules that nodes follow to agree on the validity of transactions.
+
+Smart Contracts: Self-executing code stored on the blockchain that automates agreements.
+
+🌐 Applications Cryptocurrencies: Bitcoin and Ethereum use blockchain to manage digital assets.
+
+Supply Chain: Tracks goods transparently from origin to destination.
+
+Healthcare: Secures patient records and enables data sharing.
+
+Voting Systems: Ensures tamper-proof and transparent elections.
+
+⚙ Challenges Scalability: Handling large volumes of transactions efficiently.
+
+Energy Consumption: Especially in Proof of Work systems.
+
+Regulatory Uncertainty: Varies across jurisdictions.
+
+# ChatGPT :
+## Prompt :
+
+"Summarize a 500-word technical article on "The Basics of Blockchain Technology".
+# Summary :
+
+The Basics of Blockchain Technology
+
+Blockchain technology is a decentralized digital ledger that securely records transactions across a distributed network of computers. Unlike traditional centralized databases, where data is managed by a single authority, blockchain operates on a peer-to-peer (P2P) model, ensuring transparency, security, and immutability. It underpins cryptocurrencies like Bitcoin and Ethereum but extends far beyond digital money into finance, supply chain, healthcare, and governance.
+
+# Core Concept
+A blockchain is essentially a chain of blocks, where each block contains a list of transactions. Every block holds three main elements:
+
+Data: Details of the transaction (e.g., sender, receiver, amount).
+
+Hash: A unique digital fingerprint generated using cryptographic algorithms like SHA-256.
+
+Previous Block’s Hash: A reference to the preceding block, linking them together and forming a secure chain.
+
+Once a block is added to the chain, it becomes nearly impossible to alter because modifying one block would require changing all subsequent blocks across the network — a task that demands enormous computational power.
+
+How Blockchain Works
+The blockchain process typically follows these steps:
+
+A transaction is initiated and broadcast to the network.
+
+Participating nodes (computers) validate the transaction using consensus mechanisms.
+
+Verified transactions are grouped into a new block.
+
+The block is added to the chain in a chronological and immutable manner.
+
+The updated ledger is distributed to all participants.
+
+This decentralized validation eliminates the need for intermediaries, reducing fraud and increasing efficiency.
+
+Consensus Mechanisms
+Consensus algorithms ensure that all participants agree on the ledger’s state. The most common types are:
+
+Proof of Work (PoW): Used by Bitcoin, where miners solve complex puzzles to validate transactions and earn rewards.
+
+Proof of Stake (PoS): Validators are chosen based on the number of coins they hold and are willing to “stake.”
+
+Delegated Proof of Stake (DPoS) and Proof of Authority (PoA) are newer models designed for faster and more energy-efficient consensus.
+
+# Key Features
+Decentralization: No central authority controls the network.
+
+Transparency: Every participant can view recorded transactions.
+
+Immutability: Data once added cannot be altered or deleted.
+
+Security: Cryptographic techniques safeguard the network from tampering and fraud.
+
+Smart Contracts: Self-executing code that automates transactions when predefined conditions are met, first popularized by Ethereum.
+
+## Applications
+Blockchain’s potential spans multiple domains:
+
+Finance: Cryptocurrency transactions, cross-border payments, and DeFi (Decentralized Finance).
+
+Supply Chain: Product tracking and authenticity verification.
+
+Healthcare: Secure sharing of patient records.
+
+Voting Systems: Transparent and tamper-proof election processes.
+
+Real Estate and Legal: Automated contracts and ownership verification.
+
+Challenges and Future Scope
+Despite its promise, blockchain faces challenges such as scalability, energy consumption, and regulatory uncertainty. Ongoing research focuses on Layer-2 solutions, interoperability, and green blockchain models to make the technology more sustainable and adaptable.
+
+As innovation continues, blockchain is expected to evolve from a cryptocurrency backbone into a core infrastructure for digital trust, reshaping how data and value are exchanged globally.
+
+# Evaluation Table:
+
+## Evaluation table :
+| AI Model  | Accuracy (1-10) | Coherence (1-10) | Simplicity (1-10) | Speed (1-10) | User Experience (1-10) | Overall Score (1-10) | Notes                                                                                                                                                                         |
+| --------- | --------------- | ---------------- | ----------------- | ------------ | ---------------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Claude AI | 9               | 9                | 9                 | 8            | 9                      | 8.8                  | Excellent accuracy and simplicity for undergrads; coherent and engaging narrative. Lacks depth on consensus; UX boosted by friendly tone. Assumed fast generation.            |
+| Gemini AI | 9               | 8                | 8                 | 9            | 8                      | 8.4                  | Highly accurate with strong technical detail; coherent structure but slightly dry. Simple yet precise; great for quick reads. UX solid, informative without fluff.            |
+| Copilot   | 8               | 9                | 10                | 9            | 10                     | 9.2                  | Accurate overview; highly coherent with emojis for visual flow. Simplest language and format—bullet points shine. Top UX for scannability; speedy feel from concise style.    |
+| ChatGPT   | 10              | 10               | 8                 | 8            | 9                      | 9.0                  | Most comprehensive and accurate; flawless coherence in numbered sections. Slightly denser, less simple; detailed for depth. Excellent UX with full structure; balanced speed. |
+
 
 # output:
 <img width="1162" height="322" alt="Screenshot 2025-09-11 081737" src="https://github.com/user-attachments/assets/2e5fc75f-31d2-4d58-8796-77d35e1cdb38" />
